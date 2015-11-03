@@ -13,6 +13,8 @@ function init() {
 }
 
 function addContact() {
+    
+  $("input").removeClass("editing");
     console.log('adding contacts');
     var name = $('#name').val();
     var email = $('#email').val();
