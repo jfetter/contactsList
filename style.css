@@ -1,0 +1,25 @@
+
+
+.container {
+  padding-top: 20px;
+  padding-right: 15vw;
+  padding-left: 15vw;
+}
+
+#sample * {
+  display: none;
+  border: 1 px solid black;
+}
+
+#edit, #delete {
+	font-size: 2vw;
+}
+
+.jumbotron{
+text-align: center;
+}
+
+#buttonBox{
+	text-align: center;
+}
+
