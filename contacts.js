@@ -25,6 +25,8 @@ function addContact() {
   saveLocalStorage();
 }
 function editContact() {
+  //pull up the line that is to be edited 
+  // and switch it to an input field
 
 }
 function deleteContact() {
@@ -34,7 +36,6 @@ function deleteContact() {
   contacts.splice(index, 1);
   updateContacts();
   saveLocalStorage();
-
 }
 
 function createTr() {
@@ -52,7 +53,6 @@ function updateContacts() {
 
   var contactDetails = contacts.map(function(contact) {
     var $tr = $('#template').clone();
-  debugger;
     $tr.removeAttr('id');
     $tr.children('.name').text(contact.name);
     $tr.children('.email').text(contact.email);
