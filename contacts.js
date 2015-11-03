@@ -7,8 +7,8 @@ updateContacts();
 
 function init() {
   $('#add').on('click', addContact);
-  $('.edit').click(editContact);
-  $('.delete').click(deleteContact);
+  $("td").click('.edit' , editContact);
+  $('td').click(".delete", deleteContact);
   $("#sort").click(sortList);
 }
 
@@ -86,6 +86,8 @@ function editContact() {
 
 }
 function deleteContact(editLine) { 
+  //something is wrong with this. This 
+
   if ($("input").hasClass("editing")){
     console.log("editLine")
     var $targetRow = editLine;
@@ -94,7 +96,7 @@ function deleteContact(editLine) {
   console.log("Deleting an entry")
   var $this = $(this);
   console.log("$this: ", $this);
-  var $targetRow = $(this).closest('tr');
+  var $targetRow = $this.closest('tr');
   console.log("$targetRow:" ,$targetRow)
   }
   var index = $targetRow.index();
