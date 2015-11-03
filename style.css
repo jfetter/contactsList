@@ -19,7 +19,8 @@
 text-align: center;
 }
 
-#buttonBox{
-	text-align: center;
+.editing{
+	font-weight: bold;
+	border: 2px dashed red;
+	background-color: yellow;
 }
-
