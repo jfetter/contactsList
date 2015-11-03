@@ -7,8 +7,9 @@ updateContacts();
 
 function init() {
   $('#add').on('click', addContact);
-  $('#edit').click(editContact);
-  $('#delete').click(deleteContact);
+  $('.edit').click(editContact);
+  $('.delete').click(deleteContact);
+  $("#sort").click(sortList);
 }
 
 function addContact() {
@@ -25,6 +26,21 @@ function addContact() {
     saveLocalStorage();
   
 }
+
+function sortList(event, array){
+  console.log("soring List");
+  //toggle the button from up to down arrow as clicked
+  if ($("#sortPic").hasClass("glyphicon glyphicon-menu-down"))
+      // then actually sort the menu depending on the pic
+    //ARAY OF ENTRIES.sort(FROM A-Z);
+  $("#sortPic").css("class", "glyphicon glyphicon-menu-down")
+  else
+    //ARAY OF ENTRIES.sort(FROM Z-A);
+  $("#sortPic").css("class", "glyphicon glyphicon-menu-up") 
+
+
+}
+
 function editContact() {
   
   console.log("editing contacts")
